@@ -1,0 +1,156 @@
+@mixin flex-r {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-c {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+:root{
+    --text-color:black;
+}
+
+
+.bg{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    position: fixed;
+    filter: blur(4px);
+    background-size: 100% 100vh;
+}
+
+.Profile{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    transition: .5s ease;
+    .Profile-img{
+        width:100%;
+        height: 25vh;
+        // background-color: blue;
+        display: flex;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:100px;
+            height: 100px;
+            padding: 2px;
+            border-radius:50%;
+            border:5px solid rgba($color: grey, $alpha: .4);
+        }
+    }
+    .bio-u-name{
+        width: 100%;
+        height: 100%;
+        // border-top: 1px solid white;
+        @include flex-c();
+        color: var(--text-color);
+        font-size: 25px;
+        letter-spacing: 1px;    
+        text-transform: capitalize;
+        padding: 10px 10px;
+        padding-bottom: 29px;
+    }
+    .bio-row-2{
+        width: 100%;
+        height: 18vh;
+        @include flex-r();
+        position: relative;
+        .follows{
+            width: 50%;
+            height: 100%;
+            @include flex-c();
+            align-items: flex-start;
+            position: relative;
+            .following{
+                width:auto;
+                height: 10%;
+                @include flex-r();
+                margin: 3px;
+                padding-left: 20px;
+                p{
+                    font-size: 12px;
+                    color: var(--text-color);
+                    padding-right: 5px;
+                    letter-spacing: 1px;
+                }
+            }   
+        }
+        .follows::before{
+            content: "";
+            position: absolute;
+            width: 99%;
+            height: 70%;
+            border-right:1px solid gray ;
+        }
+        .settings{
+            width: 50%;
+            height: 100%;
+            @include flex-c();
+            color: var(--text-color);
+            i{
+                font-size: 30px;
+            }
+            p{
+                font-size: 11px;
+                letter-spacing: 1px;
+                margin-top: 3px;
+            }
+        }
+    }
+    .bio-row-2::before{
+        content: "";
+        position: absolute;
+        width: 94%;
+        height: 100%;
+        border-bottom: 1px solid grey;
+        border-top: 1px solid grey;
+    }
+    .buttons-row{
+        width:100%;
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        color:var(--text-color);
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .buttons-row::before{
+        content:'';
+        position: absolute;
+        border-bottom: 1px solid gray;
+        width: 94%;
+        height: 7vh;
+    }
+    .post-section{
+        width: 100%;
+        height: 100%;
+        .image-post-sec{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .image-post{
+                width: 100px;
+                height: 100px;
+                margin: 5px 0;
+                background-color: lightcyan;
+                border-radius: 3px;
+            }
+        }
+    }
+}

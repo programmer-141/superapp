@@ -1,0 +1,242 @@
+:root {
+  --text-color:black;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  position: fixed;
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  background-size: 100% 100vh;
+}
+
+.Profile {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.Profile .Profile-img {
+  width: 100%;
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Profile .Profile-img img {
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 5px solid rgba(128, 128, 128, 0.4);
+}
+
+.Profile .bio-u-name {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color);
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: 10px 10px;
+  padding-bottom: 29px;
+}
+
+.Profile .bio-row-2 {
+  width: 100%;
+  height: 18vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.Profile .bio-row-2 .follows {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.Profile .bio-row-2 .follows .following {
+  width: auto;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3px;
+  padding-left: 20px;
+}
+
+.Profile .bio-row-2 .follows .following p {
+  font-size: 12px;
+  color: var(--text-color);
+  padding-right: 5px;
+  letter-spacing: 1px;
+}
+
+.Profile .bio-row-2 .follows::before {
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 70%;
+  border-right: 1px solid gray;
+}
+
+.Profile .bio-row-2 .settings {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--text-color);
+}
+
+.Profile .bio-row-2 .settings i {
+  font-size: 30px;
+}
+
+.Profile .bio-row-2 .settings p {
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 3px;
+}
+
+.Profile .bio-row-2::before {
+  content: "";
+  position: absolute;
+  width: 94%;
+  height: 100%;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+}
+
+.Profile .buttons-row {
+  width: 100%;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  color: var(--text-color);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.Profile .buttons-row::before {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid gray;
+  width: 94%;
+  height: 7vh;
+}
+
+.Profile .post-section {
+  width: 100%;
+  height: 100%;
+}
+
+.Profile .post-section .image-post-sec {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Profile .post-section .image-post-sec .image-post {
+  width: 100px;
+  height: 100px;
+  margin: 5px 0;
+  background-color: lightcyan;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=Profile.css.map */
